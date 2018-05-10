@@ -1,0 +1,41 @@
+Sub CopyCells()
+
+Dim ManageAccounts As Workbook
+Dim QuickFix As Workbook
+Dim HeadCount As Workbook
+
+Set ManageAccounts = Workbooks.Open("C:\Users\944074\Documents\IP Integration\Testing\Management accounts 2017-18 v3.xlsx")
+Set QuickFix = Workbooks.Open("C:\Users\944074\Documents\IP Integration\Testing\Quick Fix X Charge.xlsx")
+Set HeadCount = Workbooks.Open("C:\Users\944074\Documents\IP Integration\Testing\Headcount.xlsx")
+
+ManageAccounts.Sheets("Systems P&L ").Range("H57:T57").Copy
+QuickFix.Sheets("Sheet1").Range("AI2:AU8").PasteSpecial xlPasteValues
+
+ManageAccounts.Sheets("Applications P&L").Range("H57:T57").Copy
+QuickFix.Sheets("Sheet1").Range("AI9:AU15").PasteSpecial xlPasteValues
+
+ManageAccounts.Sheets("IT Services P&L").Range("H57:T57").Copy
+QuickFix.Sheets("Sheet1").Range("AI16:AU22").PasteSpecial xlPasteValues
+
+ManageAccounts.Sheets("Networks P&L").Range("H57:T57").Copy
+QuickFix.Sheets("Sheet1").Range("AI23:AU29").PasteSpecial xlPasteValues
+
+ManageAccounts.Sheets("Consultancy P&L").Range("H57:T57").Copy
+QuickFix.Sheets("Sheet1").Range("AI30:AU36").PasteSpecial xlPasteValues
+
+ManageAccounts.Sheets("Acenseo P&L ").Range("H57:T57").Copy
+QuickFix.Sheets("Sheet1").Range("AI37:AU43").PasteSpecial xlPasteValues
+
+ManageAccounts.Sheets("Group Div").Range("H57:T57").Copy
+QuickFix.Sheets("Sheet1").Range("AI44:AU50").PasteSpecial xlPasteValues
+
+ManageAccounts.Sheets("Trust Call P&L").Range("H57:T57").Copy
+QuickFix.Sheets("Sheet1").Range("AI51:AU57").PasteSpecial xlPasteValues
+
+ManageAccounts.Sheets("Group P&L by Charge Type").Range("K96:T101").Copy
+HeadCount.Sheets("Sheet1").Range("X2:AH7").PasteSpecial xlPasteValues
+
+ManageAccounts.Close
+
+End Sub
+
